@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-pets-configmap
+data:
+  MYSQL_ROOT_PASSWORD: abc
+  MYSQL_DATABASE: pets
+  MYSQL_PASSWORD: abc
