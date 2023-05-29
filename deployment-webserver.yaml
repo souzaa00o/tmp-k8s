@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp-webserver
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: dp-pod-webserver
+      labels:
+        app: dp-webserver
+    spec:
+      containers:
+        - name: dp-webserver-container
+          image: nginx:1
+          ports:
+            - containerPort: 80
+  selector:
+    matchLabels:
+      app: dp-webserver
